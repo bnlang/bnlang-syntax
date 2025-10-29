@@ -97,7 +97,7 @@
           "patterns": [
             {
               "name": "entity.name.function.bnlang",
-              "match": "(?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\u0980-\\u09FF_][\\u0980-\\u09FF0-9_\\$]*)"
+              "match": "(?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\x{0980}-\\x{09FF}_][\\x{0980}-\\x{09FF}0-9_\\$]*)"
             }
           ]
         }
@@ -108,7 +108,7 @@
       "patterns": [
         {
           "name": "meta.function-call.bnlang",
-          "match": "(?<![\\p{L}\\p{N}_])(?!(?:if|যদি|jodi|else|নাহলে|nahole|switch|বিকল্প|bikolpo|case|অবস্থা|obostha|default|অন্যথায়|onnothay|for|প্রতি|proti|while|যতক্ষণ|jotokkhon|do|করুন|korun|break|থামুন|thamun|continue|চলুন|colun|return|ফেরত|ferot|throw|নিক্ষেপ|nikkhep|try|চেষ্টা|ceshta|catch|ধরুন|dhorun|finally|অবশেষে|obosheshe|var|চলক|cholok|let|ধরি|dhori|const|ধ্রুবক|dhrubok|function|ফাংশন|class|শ্রেণী|shreni|extends|প্রসারিত|prosarito|super|অভিভাবক|obhibhabok|typeof|ধরন|dhoron|instanceof|উদাহরণ_হিসেবে|udahoron_hisebe|in|মধ্যে|modhye|of|এর|er|void|ফাঁকা|faka|delete|মুছুন|muchun|await|অপেক্ষা|opekkha|async|অসমলয়|osomoloy|yield|উৎপন্ন_করুন|utponno_korun|this|এটি|eti|new|নতুন|notun|with|সাথে|sathe|debugger|ডিবাগার|dibagar|static|স্থির|sthir|true|সত্য|shotto|false|মিথ্যা|mithya|null|শূন্য|shunno|undefined)\\b)(?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\u0980-\\u09FF_][\\u0980-\\u09FF0-9_\\$]*)\\s*(?=\\()",
+          "match": "(?<![\\p{L}\\p{N}_])(?!(?:if|যদি|jodi|else|নাহলে|nahole|switch|বিকল্প|bikolpo|case|অবস্থা|obostha|default|অন্যথায়|onnothay|for|প্রতি|proti|while|যতক্ষণ|jotokkhon|do|করুন|korun|break|থামুন|thamun|continue|চলুন|colun|return|ফেরত|ferot|throw|নিক্ষেপ|nikkhep|try|চেষ্টা|ceshta|catch|ধরুন|dhorun|finally|অবশেষে|obosheshe|var|চলক|cholok|let|ধরি|dhori|const|ধ্রুবক|dhrubok|function|ফাংশন|class|শ্রেণী|shreni|extends|প্রসারিত|prosarito|super|অভিভাবক|obhibhabok|typeof|ধরন|dhoron|instanceof|উদাহরণ_হিসেবে|udahoron_hisebe|in|মধ্যে|modhye|of|এর|er|void|ফাঁকা|faka|delete|মুছুন|muchun|await|অপেক্ষা|opekkha|async|অসমলয়|osomoloy|yield|উৎপন্ন_করুন|utponno_korun|this|এটি|eti|new|নতুন|notun|with|সাথে|sathe|debugger|ডিবাগার|dibagar|static|স্থির|sthir|true|সত্য|shotto|false|মিথ্যা|mithya|null|শূন্য|shunno|undefined)\\b)(?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\x{0980}-\\x{09FF}_][\\x{0980}-\\x{09FF}0-9_\\$]*)\\s*(?=\\()",
           "captures": { "0": { "name": "entity.name.function.bnlang" } }
         }
       ]
@@ -124,11 +124,11 @@
           "patterns": [
             {
               "name": "entity.name.class.bnlang",
-              "match": "(?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\u0980-\\u09FF_][\\u0980-\\u09FF0-9_\\$]*)"
+              "match": "(?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\x{0980}-\\x{09FF}_][\\x{0980}-\\x{09FF}0-9_\\$]*)"
             },
             {
               "name": "meta.class.extends.bnlang",
-              "match": "\\b(extends|প্রসারিত|prosarito|implements)\\b\\s+((?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\u0980-\\u09FF_][\\u0980-\\u09FF0-9_\\$]*))",
+              "match": "\\b(extends|প্রসারিত|prosarito|implements)\\b\\s+((?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\x{0980}-\\x{09FF}_][\\x{0980}-\\x{09FF}0-9_\\$]*))",
               "captures": {
                 "1": { "name": "keyword.other.extends.bnlang" },
                 "2": { "name": "entity.other.inherited-class.bnlang" }
@@ -143,7 +143,7 @@
       "patterns": [
         {
           "name": "meta.class-instantiation.bnlang",
-          "match": "(?<![\\p{L}\\p{N}_])(new|নতুন|notun)\\s+((?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\u0980-\\u09FF_][\\u0980-\\u09FF0-9_\\$]*))",
+          "match": "(?<![\\p{L}\\p{N}_])(new|নতুন|notun)\\s+((?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\x{0980}-\\x{09FF}_][\\x{0980}-\\x{09FF}0-9_\\$]*))",
           "captures": {
             "1": { "name": "keyword.operator.new.bnlang" },
             "2": { "name": "entity.name.class.bnlang" }
@@ -169,13 +169,13 @@
     "constants": {
       "patterns": [
         { "name": "constant.language.boolean.bnlang", "match": "(?<![\\p{L}\\p{N}_])(true|সত্য|shotto|false|মিথ্যা|mithya)(?![\\p{L}\\p{N}_])" },
-        { "name": "constant.language.null.bnlang", "match": "(?<![\\p{L}\\p{N}_])(null|শূন্য|shunno|undefined)(?![\\p{L}\\p{N}_])" }
+        { "name": "constant.language.null.bnlang", "match": "(?<![\\p{L}\\p{N}_])(null|शূন্য|shunno|undefined)(?![\\p{L}\\p{N}_])" }
       ]
     },
 
     "identifiers": {
       "patterns": [
-        { "name": "variable.other.readwrite.bnlang", "match": "(?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\u0980-\\u09FF_][\\u0980-\\u09FF0-9_\\$]*)" }
+        { "name": "variable.other.readwrite.bnlang", "match": "(?:[A-Za-z_\\$][A-Za-z0-9_\\$]*|[\\x{0980}-\\x{09FF}_][\\x{0980}-\\x{09FF}0-9_\\$]*)" }
       ]
     },
 
