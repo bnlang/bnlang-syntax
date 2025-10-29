@@ -1,0 +1,41 @@
+{
+    "name": "bnlang-syntax",
+    "displayName": "Bnlang Syntax Highlighting",
+    "description": "Syntax highlighting and language support for the Bangla programming language (Bnlang)",
+    "version": "1.0.0",
+    "publisher": "bnlang",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "bnlang",
+                "aliases": [
+                    "Bnlang",
+                    "bnl"
+                ],
+                "extensions": [
+                    ".bnl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "bnlang",
+                "scopeName": "source.bnlang",
+                "path": "./syntaxes/bnlang.tmLanguage.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bnlang/bnlang-syntax.git"
+    },
+    "icon": "images/favicon-128X128.png",
+    "license": "MIT"
+}
